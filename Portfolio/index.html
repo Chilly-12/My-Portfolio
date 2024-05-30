@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="Styles.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="logo">My Portfolio</div>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#" class="drawer-toggle">
+          <i class="fas fa-bars"></i>
+        </a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <video autoplay loop muted class="hero-video">
+        <source src="background.mp4" type="video/mp4">
+      </video>
+      <div class="hero-content">
+        <h1>Welcome to My Portfolio</h1>
+        <p>Showcasing my skills and projects</p>
+        <a href="#" id="view-projects" class="cta">View My Work</a>
+      </div>
+    </section>
+
+    <section class="about" id="about">
+      <div class="container">
+        <h2>About Me</h2>
+        <p>Hello, I'm Rafael Timotheus Chili, Student at NUST with a deep passion for the art of coding and creating innovative digital solutions. I've attended a pre-WIL employability workshop and I've had the opportunity to work in a team as I was the team leader of the project we worked on.I'm always eager to learn new skills and take on new challenges.</p>
+        <a href="#" class="cta">Learn More</a>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="container">
+        <h2>Get in Touch</h2>
+        <div class="contact-info">
+          <p><i class="fas fa-envelope"></i> <a href="mailto:chillyrafael872@gmail.com">chillyrafael872@gmail.com</a></p>
+          <p><i class="fas fa-phone"></i> <a href="tel:+264814139502">+264 81 413 9502</a> / <a href="tel:+264857379817">+264 85 737 9817</a></p>
+        </div>
+        <form action="submit-form.php" method="post">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required>
+
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" required></textarea>
+
+          <button type="submit">Send</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2023 My Portfolio. All rights reserved.</p>
+      <div class="social-links">
+        <a href="https://www.instagram.com/ddown_ttown/"><i class="fab fa-instagram"></i></a>
+        <a href="https://github.com/Chilly-12"><i class="fab fa-github"></i></a>
+        <a href="https://x.com/___Juice__"><i class="fab fa-twitter"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <div class="drawer">
+    <div class="drawer-header">
+      <h3>Additional Documents</h3>
+      <button class="drawer-close-btn">
+        <i class="fas fa-times"></i>
+      </button>
+    </div>
+    <div class="drawer-content">
+      <ul>
+        <li><a href="#" id="resume-link">Resume</a></li>
+        <li><a href="#" id="cover-letter-link">Cover Letter</a></li>
+        <li><a href="#" id="wil-letter-link">WIL Letter</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <script>
+    const drawerToggle = document.querySelector('.drawer-toggle');
+    const drawer = document.querySelector('.drawer');
+    const drawerCloseBtn = document.querySelector('.drawer-close-btn');
+    const viewProjectsLink = document.getElementById('view-projects');
+
+    drawerToggle.addEventListener('click', () => {
+      drawer.classList.toggle('open');
+    });
+
+    drawerCloseBtn.addEventListener('click', () => {
+      drawer.classList.remove('open');
+    });
+
+    viewProjectsLink.addEventListener('click', () => {
+      window.open('projects.pdf', '_blank');
+    });
+
+    const resumeLink = document.getElementById('resume-link');
+    const coverLetterLink = document.getElementById('cover-letter-link');
+    const wilLetterLink = document.getElementById('wil-letter-link');
+
+    resumeLink.addEventListener('click', () => {
+      window.open('Resume.pdf', '_blank');
+    });
+
+    coverLetterLink.addEventListener('click', () => {
+      window.open('cover_letter.pdf', '_blank');
+    });
+
+    wilLetterLink.addEventListener('click', () => {
+      window.open('WIL.pdf', '_blank');
+    });
+  </script>
+</body>
+</html>
