@@ -37,7 +37,7 @@ You can also connect with me on social media:
 I would like to express my gratitude to the organizers of the pre-WIL employability workshop for the valuable learning experience and the opportunity to showcase my skills.
 
 ## Building and Setup
-This portfolio website was built using HTML, CSS, and JavaScript. It is hosted on a server and can be accessed at [www.myportfolio.com](www.myportfolio.com).
+This portfolio website was built using HTML, CSS, and JavaScript. It is hosted on a server and can be accessed at https://chilly-12.github.io/My-Portfolio/Portfolio/.
 
 To run the website locally, follow these steps:
 
