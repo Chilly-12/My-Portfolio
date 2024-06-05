@@ -49,6 +49,7 @@
           <p><i class="fas fa-envelope"></i> <a href="mailto:chillyrafael872@gmail.com">chillyrafael872@gmail.com</a></p>
           <p><i class="fas fa-phone"></i> <a href="tel:+264814139502">+264 81 413 9502</a> / <a href="tel:+264857379817">+264 85 737 9817</a></p>
         </div>
+
     </section>
   </main>
 
@@ -75,6 +76,9 @@
         <li><a href="#" id="resume-link">Resume</a></li>
         <li><a href="#" id="cover-letter-link">Cover Letter</a></li>
         <li><a href="#" id="wil-letter-link">WIL Letter</a></li>
+        <li><a href="#" id="employability-pre-wil-certificate-link">Employability Pre WIL Certificate</a></li>
+        <li><a href="#" id="academic-record-link">Academic Record</a></li>
+        <li><a href="#" id="identity-card-link">Identity Card</a></li>
       </ul>
     </div>
   </div>
@@ -100,6 +104,9 @@
     const resumeLink = document.getElementById('resume-link');
     const coverLetterLink = document.getElementById('cover-letter-link');
     const wilLetterLink = document.getElementById('wil-letter-link');
+    const employabilityPreWilCertificateLink = document.getElementById('employability-pre-wil-certificate-link');
+    const academicRecordLink = document.getElementById('academic-record-link');
+    const identityCardLink = document.getElementById('identity-card-link');
 
     resumeLink.addEventListener('click', () => {
       window.open('Resume.pdf', '_blank');
@@ -111,6 +118,18 @@
 
     wilLetterLink.addEventListener('click', () => {
       window.open('WIL.pdf', '_blank');
+    });
+    
+    employabilityPreWilCertificateLink.addEventListener('click', () => {
+      window.open('ePreWil.pdf', '_blank');
+    });
+
+    academicRecordLink.addEventListener('click', () => {
+      window.open('academic_record.pdf', '_blank');
+    });
+
+    identityCardLink.addEventListener('click', () => {
+      window.open('ID.pdf', '_blank');
     });
   </script>
 </body>
