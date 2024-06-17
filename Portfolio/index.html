@@ -62,6 +62,7 @@
         <a href="https://github.com/Chilly-12"><i class="fab fa-github"></i></a>
         <a href="https://x.com/___Juice__"><i class="fab fa-twitter"></i></a>
         <a href="https://www.linkedin.com/in/chilly-rafael-3433122b7/"><i class="fab fa-linkedin"></i></a>
+        
       </div>
     </div>
   </footer>
@@ -79,7 +80,8 @@
         <li><a href="#" id="cover-letter-link">Cover Letter</a></li>
         <li><a href="#" id="wil-letter-link">WIL Letter</a></li>
         <li><a href="#" id="employability-pre-wil-certificate-link">Employability Pre WIL Certificate</a></li>
-        <li><a href="#" id="academic-record-link">Academic Record</a></li>
+        <li><a href="#" id="academic-transcript-link">Academic Transcript</a></li>
+        <li><a href="#" id="tertiary-qualification-link">Tertiary Qualification</a></li>
         <li><a href="#" id="identity-card-link">Identity Card</a></li>
       </ul>
     </div>
@@ -107,7 +109,8 @@
     const coverLetterLink = document.getElementById('cover-letter-link');
     const wilLetterLink = document.getElementById('wil-letter-link');
     const employabilityPreWilCertificateLink = document.getElementById('employability-pre-wil-certificate-link');
-    const academicRecordLink = document.getElementById('academic-record-link');
+    const academicTranscriptLink = document.getElementById('academic-transcript-link');
+    const tertiaryQualificationLink = document.getElementById('tertiary-qualification-link');
     const identityCardLink = document.getElementById('identity-card-link');
 
     resumeLink.addEventListener('click', () => {
@@ -126,9 +129,13 @@
       window.open('ePreWil.pdf', '_blank');
     });
 
-    academicRecordLink.addEventListener('click', () => {
-      window.open('academic_record.pdf', '_blank');
+    academicTranscriptLink.addEventListener('click', () => {
+      window.open('academic_transcript.pdf', '_blank');
     });
+    
+    tertiaryQualificationLink.addEventListener('click', () => {
+      window.open('tertiary_qualification.pdf', '_blank');
+    })
 
     identityCardLink.addEventListener('click', () => {
       window.open('ID.pdf', '_blank');
