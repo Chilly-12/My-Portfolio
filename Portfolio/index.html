@@ -77,7 +77,6 @@
     <div class="drawer-content">
       <ul>
         <li><a href="#" id="resume-link">Resume</a></li>
-        <li><a href="#" id="cover-letter-link">Cover Letter</a></li>
         <li><a href="#" id="wil-letter-link">WIL Letter</a></li>
         <li><a href="#" id="employability-pre-wil-certificate-link">Employability Pre WIL Certificate</a></li>
         <li><a href="#" id="academic-transcript-link">Academic Transcript</a></li>
@@ -106,7 +105,6 @@
     });
 
     const resumeLink = document.getElementById('resume-link');
-    const coverLetterLink = document.getElementById('cover-letter-link');
     const wilLetterLink = document.getElementById('wil-letter-link');
     const employabilityPreWilCertificateLink = document.getElementById('employability-pre-wil-certificate-link');
     const academicTranscriptLink = document.getElementById('academic-transcript-link');
@@ -115,10 +113,6 @@
 
     resumeLink.addEventListener('click', () => {
       window.open('Resume.pdf', '_blank');
-    });
-
-    coverLetterLink.addEventListener('click', () => {
-      window.open('cover_letter.pdf', '_blank');
     });
 
     wilLetterLink.addEventListener('click', () => {
