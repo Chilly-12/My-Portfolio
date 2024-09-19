@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  
+  <link rel="stylesheet" href="Styles.css">
+  <link rel="icon" type="image/png" href="images/logo.jpg">
+</head>
+<body>
+
+  <header>
+    <nav>
+        <div class="logo">My Portfolio</div>
+        <ul>
+            <li>
+                <a href="#">
+                    <span class="icon"><i class="fas fa-home"></i></span>
+                    Home
+                </a>
+            </li>
+            <li>
+                <a href="#about">
+                    <span class="icon"><i class="fas fa-user"></i></span>
+                    About
+                </a>
+            </li>
+            <li>
+                <a href="#contact">
+                    <span class="icon"><i class="fas fa-envelope"></i></span>
+                    Contact
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+  <main>
+    <section class="hero">
+      <video autoplay loop muted class="hero-video">
+        <source src="videos/background.mp4" type="video/mp4">
+      </video>
+      <div class="hero-content">
+        <h1>Welcome to My Portfolio</h1>
+        <p>Showcasing my skills and projects</p>
+        <a href="#" id="view-projects" class="cta1">View My Work</a>
+      </div>
+    </section>
+
+    <section class="about" id="about">
+      <div class="container">
+        <h2>About Me</h2>
+        <p1>Hello, I'm Rafael Timotheus Chilli, Student at NUST with a deep passion for the art of coding and creating innovative digital solutions. I've attended a pre-WIL employability workshop and I've had the opportunity to work in a team as I was the team leader of the project we worked on.I'm always eager to learn new skills and take on new challenges. <strong>Click the button below to find my attached documents!</strong></p1>
+      <br>
+      <a href="#" class="cta">Additional Documents</a>
+
+<div class="drawer">
+    <div class="drawer-header">
+        <h3>Additional Documents</h3>
+        <button class="drawer-close-btn">
+            <i class="fas fa-times"></i>
+        </button>
+    </div>
+    <div class="drawer-content">
+        <ul>
+            <li><a href="#" id="resume-link">Resume</a></li>
+            <li><a href="#" id="wil-letter-link">WIL Letter</a></li>
+            <li><a href="#" id="employability-pre-wil-certificate-link">Employability Pre WIL Certificate</a></li>
+            <li><a href="#" id="academic-transcript-link">Academic Transcript</a></li>
+            <li><a href="#" id="tertiary-qualification-link">Tertiary Qualification</a></li>
+            <li><a href="#" id="identity-card-link">Identity Card</a></li>
+        </ul>
+    </div>
+</div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="container">
+        <h2>Get in Touch</h2>
+        <div class="contact-info">
+          <p2><i class="fas fa-envelope"></i> <a href="mailto:chillyrafael872@gmail.com">info@domain</a></p>
+          <p2><i class="fas fa-phone"></i> <a href="tel:+264814139502">MTC</a> / <a href="tel:+264857379817">tn Mobile</a></p>
+        </div>
+
+    </section>
+  </main>
+  
+  <script>
+    const ctaButton = document.querySelector('.cta');
+    const drawer = document.querySelector('.drawer');
+    const drawerCloseBtn = document.querySelector('.drawer-close-btn');
+
+    ctaButton.addEventListener('click', (event) => {
+        event.preventDefault(); // Prevent default anchor behavior
+        const rect = ctaButton.getBoundingClientRect();
+        drawer.style.left = `${rect.left}px`;
+        drawer.style.top = `${rect.bottom}px`;
+        drawer.classList.toggle('open');
+    });
+
+    drawerCloseBtn.addEventListener('click', () => {
+        drawer.classList.remove('open');
+    });
+
+    document.getElementById('view-projects').addEventListener('click', () => {
+        window.open('docs/projects.pdf', '_blank');
+    });
+
+    document.getElementById('resume-link').addEventListener('click', () => {
+        window.open('docs/resume.pdf', '_blank');
+    });
+
+    document.getElementById('wil-letter-link').addEventListener('click', () => {
+        window.open('docs/WIL.pdf', '_blank');
+    });
+
+    document.getElementById('employability-pre-wil-certificate-link').addEventListener('click', () => {
+        window.open('docs/ePreWil.pdf', '_blank');
+    });
+
+    document.getElementById('academic-transcript-link').addEventListener('click', () => {
+        window.open('docs/academic_transcript.pdf', '_blank');
+    });
+
+    document.getElementById('tertiary-qualification-link').addEventListener('click', () => {
+        window.open('docs/tertiary_qualification.pdf', '_blank');
+    });
+
+    document.getElementById('identity-card-link').addEventListener('click', () => {
+        window.open('docs/ID.pdf', '_blank');
+    });
+
+document.getElementById('jumpToTop').onclick = function() {
+    document.body.scrollTop = 0; // For Safari
+    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE, and Opera
+};
+
+</script>
+
+<footer>
+  <div class="container">
+    <p>&copy; 2024 My Portfolio. All rights reserved.</p>
+    <div class="social-links">
+      <a href="https://www.instagram.com/ddown_ttown/"><i class="fab fa-instagram"></i></a>
+      <a href="https://github.com/Chilly-12"><i class="fab fa-github"></i></a>
+      <a href="https://x.com/___Juice__"><i class="fab fa-twitter"></i></a>
+      <a href="https://www.linkedin.com/in/chilly-rafael-3433122b7/"><i class="fab fa-linkedin"></i></a>  
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
